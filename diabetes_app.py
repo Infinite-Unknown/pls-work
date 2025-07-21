@@ -89,9 +89,9 @@ if mode == "Use Prediction":
             input_array = np.array(user_input).reshape(1, -1)
             result = model.predict(input_array)
             if result[0] == 1:
-                st.success("🩺 You are likely to have diabetes.")
+                st.error("🩺 You are likely to have diabetes.")
             else:
-                st.success("✅ You are not likely to have diabetes.")
+                st.success("✅ You are safe.")
         except Exception as e:
             st.error(f"❌ Prediction error: {e}")
 
